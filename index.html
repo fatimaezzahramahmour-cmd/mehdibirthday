@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stade Secret Premium - Mehdi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="stadium-bg" id="stadium-bg" aria-hidden="true">
+      <div class="stadium-half raja-side"></div>
+      <div class="stadium-half barca-side"></div>
+      <div class="flood flood-raja"></div>
+      <div class="flood flood-barca"></div>
+      <div class="screen-panel panel-left">RCA</div>
+      <div class="screen-panel panel-right">FCB</div>
+      <div class="pitch"></div>
+    </div>
+    <div id="fx-layer" aria-hidden="true"></div>
+
+    <main>
+      <section id="intro" class="screen active">
+        <p class="kicker">Immersive birthday mission</p>
+        <h1>Marhba bik a Mehdi f stade secret dyalk...</h1>
+        <p class="sub">Stade nocturne, ambiance cinema, et un bouton troll qui refuse l'evidence.</p>
+        <div id="troll-zone" class="troll-zone">
+          <button id="start-btn" class="pill-btn">Start</button>
+        </div>
+        <p id="intro-msg" class="status">Try to catch the button.</p>
+      </section>
+
+      <section id="game-laser" class="screen hidden">
+        <h2>Jeu 1: Ultra Puzzle ULTRAS</h2>
+        <p>Recompose l'image en 12 pieces. Glisse une piece vers une autre pour echanger.</p>
+        <div id="ultras-puzzle" class="ultras-puzzle" aria-label="Puzzle 12 pieces"></div>
+        <p id="laser-msg" class="status">Sda9: salli puzzle bach t7ell game jaya.</p>
+      </section>
+
+      <section id="game-memory" class="screen hidden">
+        <h2>Jeu 2: Memory Challenge des supporters</h2>
+        <p>Observe la combinaison des supporters puis retrouve-la.</p>
+        <div id="memory-sequence" class="memory-sequence"></div>
+        <div id="memory-grid" class="memory-grid"></div>
+        <p id="memory-msg" class="status"></p>
+      </section>
+
+      <section id="game-penalty" class="screen hidden">
+        <h2>Jeu 3 Final: Penalty decisif</h2>
+        <p>Tire dans une zone. Si but: slow motion + stadium blast.</p>
+        <div class="penalty-stage">
+          <div class="goal-frame"></div>
+          <div id="keeper" class="keeper">🧤</div>
+          <div class="target-zone zone-left" data-shot="left"></div>
+          <div class="target-zone zone-center" data-shot="center"></div>
+          <div class="target-zone zone-right" data-shot="right"></div>
+          <div id="shot-ball" class="shot-ball">⚽</div>
+        </div>
+        <div class="shot-controls">
+          <button class="pill-btn shot-btn" data-shot="left">Tir gauche</button>
+          <button class="pill-btn shot-btn" data-shot="center">Tir centre</button>
+          <button class="pill-btn shot-btn" data-shot="right">Tir droite</button>
+        </div>
+        <p id="penalty-msg" class="status"></p>
+      </section>
+
+      <section id="final" class="screen hidden final-screen">
+        <p class="kicker">Final reveal</p>
+        <h2>HAPPY BIRTHDAY MEHDI 🎉</h2>
+        <p class="sub">Confettis, fireworks, fumigenes, ecrans geants, et vibes legendaires.</p>
+        <div class="mega-screens">
+          <div class="mega-screen">HAPPY</div>
+          <div class="mega-screen">BIRTHDAY</div>
+          <div class="mega-screen">MEHDI</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
